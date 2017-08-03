@@ -34,7 +34,7 @@
             <field name="related_model" search="[('model','=','analytic_account.line')]"/>
         </record>
         <record model="babi.expression" id="analytic_account_line">
-            <field name="ttype">int</field>
+            <field name="ttype">integer</field>
             <field name="model" search="[('model','=','analytic_account.line')]"/>
             <field name="expression">o.id</field>
             <field name="name">ID</field>
