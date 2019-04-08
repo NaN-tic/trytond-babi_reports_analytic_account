@@ -1,10 +1,10 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "model:babi.dimension,name:analytic_line_account_year__account"
 msgid "Account"
-msgstr "Cuenta"
+msgstr "Cuentas"
 
 msgctxt "model:babi.dimension,name:analytic_line_account_year__year"
 msgid "Year"
@@ -12,7 +12,7 @@ msgstr "Año"
 
 msgctxt "model:babi.dimension,name:analytic_line_user_year_account__account"
 msgid "Account"
-msgstr "Cuenta"
+msgstr "Cuentas"
 
 msgctxt "model:babi.dimension,name:analytic_line_user_year_account__user"
 msgid "User"
@@ -43,11 +43,11 @@ msgstr "Cuenta analítica"
 
 msgctxt "model:babi.expression,name:account_move_line_analytic_account_name"
 msgid "Analytic Account Name"
-msgstr "Nombre cuenta analítica"
+msgstr "Nombre de la cuenta analítica"
 
 msgctxt "model:babi.expression,name:analytic_account_line"
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 msgctxt "model:babi.expression,name:analytic_account_line_account"
 msgid "Analytic Account"
@@ -55,7 +55,7 @@ msgstr "Cuenta analítica"
 
 msgctxt "model:babi.expression,name:analytic_account_line_account_name"
 msgid "Analytic Account Name"
-msgstr "Nombre cuenta analítica"
+msgstr "Nombre de la cuenta analítica"
 
 msgctxt "model:babi.expression,name:analytic_account_line_amount"
 msgid "Debit - Credit"
@@ -79,17 +79,17 @@ msgstr "Debe"
 
 msgctxt "model:babi.expression,name:analytic_account_line_general_account"
 msgid "General Account"
-msgstr "Cuenta general"
+msgstr "Planes contables"
 
 msgctxt ""
 "model:babi.expression,name:analytic_account_line_general_account_code"
 msgid "General Account Code"
-msgstr "Código cuenta general"
+msgstr "Código cuenta analítica"
 
 msgctxt ""
 "model:babi.expression,name:analytic_account_line_general_account_name"
 msgid "General Account Name"
-msgstr "Nombre cuenta general"
+msgstr "Nombre de la cuenta analítica"
 
 msgctxt "model:babi.expression,name:analytic_account_line_month"
 msgid "Month"
@@ -97,7 +97,7 @@ msgstr "Mes"
 
 msgctxt "model:babi.expression,name:analytic_account_line_move_name"
 msgid "Move"
-msgstr "Asiento"
+msgstr "Movimiento"
 
 msgctxt "model:babi.expression,name:analytic_account_line_name"
 msgid "Name"
@@ -137,7 +137,7 @@ msgstr "Subtotal"
 
 msgctxt "model:babi.report,name:analytic_line_account_year"
 msgid "Amount - Year"
-msgstr "Import - Año"
+msgstr "Importe - Año"
 
 msgctxt "model:babi.report,name:analytic_line_user_year_account"
 msgid "User - Year - Account"
