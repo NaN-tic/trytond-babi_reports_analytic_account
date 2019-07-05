@@ -164,13 +164,13 @@
             <field name="report" ref="invoice_line_year_analyticaccount"/>
             <field name="expression" ref="babi_reports_account_invoice.account_invoice_line_year"/>
             <field name="name">Year</field>
-            <field name="sequence">1</field>
+            <field name="sequence" eval="1"/>
         </record>
         <record model="babi.dimension" id="invoice_line_year_analyticaccount__analytic_account">
             <field name="report" ref="invoice_line_year_analyticaccount"/>
             <field name="expression" ref="account_invoice_line_analytic_account_name"/>
             <field name="name">Analytic Account</field>
-            <field name="sequence">2</field>
+            <field name="sequence" eval="2"/>
         </record>
         <record model="babi.measure" id="invoice_line_year_analyticaccount__subtotal">
             <field name="report" ref="invoice_line_year_analyticaccount"/>
@@ -196,20 +196,20 @@
             <field name="report" ref="analytic_line_account_year"/>
             <field name="expression" ref="analytic_account_line_account_name"/>
             <field name="name">Account</field>
-            <field name="sequence">1</field>
+            <field name="sequence" eval="1"/>
         </record>
         <record model="babi.dimension" id="analytic_line_account_year__year">
             <field name="report" ref="analytic_line_account_year"/>
             <field name="expression" ref="analytic_account_line_year"/>
             <field name="name">Year</field>
-            <field name="sequence">2</field>
+            <field name="sequence" eval="2"/>
         </record>
         <record model="babi.measure" id="analytic_line_account_year__amount">
             <field name="report" ref="analytic_line_account_year"/>
             <field name="expression" ref="analytic_account_line_amount"/>
             <field name="name">Debit - Credit</field>
             <field name="aggregate">sum</field>
-            <field name="sequence">1</field>
+            <field name="sequence" eval="1"/>
         </record>
 
         <!-- User - Year / Account | Quantity -->
@@ -228,26 +228,26 @@
             <field name="report" ref="analytic_line_user_year_account"/>
             <field name="expression" ref="analytic_account_line_user_name"/>
             <field name="name">User</field>
-            <field name="sequence">1</field>
+            <field name="sequence" eval="1"/>
         </record>
         <record model="babi.dimension" id="analytic_line_user_year_account__account">
             <field name="report" ref="analytic_line_user_year_account"/>
             <field name="expression" ref="analytic_account_line_account_name"/>
             <field name="name">Account</field>
-            <field name="sequence">1</field>
+            <field name="sequence" eval="1"/>
         </record>
         <record model="babi.dimension.column" id="analytic_line_user_year_account__year">
             <field name="report" ref="analytic_line_user_year_account"/>
             <field name="expression" ref="analytic_account_line_year"/>
             <field name="name">Year</field>
-            <field name="sequence">2</field>
+            <field name="sequence" eval="2"/>
         </record>
         <record model="babi.measure" id="analytic_line_user_year_account__amount">
             <field name="report" ref="analytic_line_user_year_account"/>
             <field name="expression" ref="analytic_account_line_amount"/>
             <field name="name">Debit - Credit</field>
             <field name="aggregate">sum</field>
-            <field name="sequence">1</field>
+            <field name="sequence" eval="1"/>
         </record>
     </data>
 </tryton>
