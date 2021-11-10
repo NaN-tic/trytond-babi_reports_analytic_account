@@ -2,10 +2,8 @@
 <!-- The COPYRIGHT file at the top level of this repository contains the full
      copyright notices and license terms. -->
 <tryton>
-    <data>
-        <!--
-            Expressions
-        -->
+    <data grouped="1">
+        <!-- Expressions -->
         <!-- analytic_account.line -->
         <record model="babi.expression" id="account_invoice_line_analytic_account_name">
             <field name="ttype">char</field>
