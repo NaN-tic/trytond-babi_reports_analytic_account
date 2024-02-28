@@ -8,7 +8,7 @@
         <record model="babi.expression" id="account_invoice_line_analytic_account_name">
             <field name="ttype">char</field>
             <field name="model" search="[('model','=','account.invoice.line')]"/>
-            <field name="expression">o.analytic_accounts and ','.join([x.account.rec_name for x in o.analytic_accounts])</field>
+            <field name="expression">o.analytic_accounts and ','.join([(x.account and x.account.rec_name or '') for x in o.analytic_accounts])</field>
             <field name="name">Analytic Account</field>
         </record>
         <record model="babi.expression" id="account_move_line_analytic_account">
