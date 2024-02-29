@@ -14,14 +14,14 @@
         <record model="babi.expression" id="account_move_line_analytic_account">
             <field name="ttype">many2one</field>
             <field name="model" search="[('model','=','account.move.line')]"/>
-            <field name="expression">o.analytic_accounts and o.analytic_accounts[0].account.id</field>
+            <field name="expression">o.analytic_lines and o.analytic_lines[0].account.id</field>
             <field name="name">Analytic Account</field>
             <field name="related_model" search="[('model', '=', 'analytic_account.account')]"/>
         </record>
         <record model="babi.expression" id="account_move_line_analytic_account_name">
             <field name="ttype">char</field>
             <field name="model" search="[('model','=','account.move.line')]"/>
-            <field name="expression">o.analytic_accounts and ','.join([x.name for x in o.analytic_accounts.accounts])</field>
+            <field name="expression">o.analytic_lines and ','.join([x.account.name for x in o.analytic_lines])</field>
             <field name="name">Analytic Account Name</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_self">
@@ -40,7 +40,7 @@
         <record model="babi.expression" id="analytic_account_line_name">
             <field name="ttype">char</field>
             <field name="model" search="[('model','=','analytic_account.line')]"/>
-            <field name="expression">o.name</field>
+            <field name="expression">o.rec_name</field>
             <field name="name">Name</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_year">
