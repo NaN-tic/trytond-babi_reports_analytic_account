@@ -7,137 +7,137 @@
         <!-- analytic_account.line -->
         <record model="babi.expression" id="account_invoice_line_analytic_account_name">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','account.invoice.line')]"/>
+            <field name="model" search="[('name','=','account.invoice.line')]"/>
             <field name="expression">o.analytic_accounts and ','.join([(x.account and x.account.rec_name or '') for x in o.analytic_accounts])</field>
             <field name="name">Analytic Account</field>
         </record>
         <record model="babi.expression" id="account_move_line_analytic_account">
             <field name="ttype">many2one</field>
-            <field name="model" search="[('model','=','account.move.line')]"/>
+            <field name="model" search="[('name','=','account.move.line')]"/>
             <field name="expression">o.analytic_lines and o.analytic_lines[0].account.id</field>
             <field name="name">Analytic Account</field>
-            <field name="related_model" search="[('model', '=', 'analytic_account.account')]"/>
+            <field name="related_model" search="[('name', '=', 'analytic_account.account')]"/>
         </record>
         <record model="babi.expression" id="account_move_line_analytic_account_name">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','account.move.line')]"/>
+            <field name="model" search="[('name','=','account.move.line')]"/>
             <field name="expression">o.analytic_lines and ','.join([x.account.name for x in o.analytic_lines])</field>
             <field name="name">Analytic Account Name</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_self">
             <field name="ttype">many2one</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.id</field>
             <field name="name">Line</field>
-            <field name="related_model" search="[('model','=','analytic_account.line')]"/>
+            <field name="related_model" search="[('name','=','analytic_account.line')]"/>
         </record>
         <record model="babi.expression" id="analytic_account_line">
             <field name="ttype">integer</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.id</field>
             <field name="name">ID</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_name">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.rec_name</field>
             <field name="name">Name</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_year">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">y(o.date)</field>
             <field name="name">Year</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_month">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">m(o.date)</field>
             <field name="name">Month</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_day">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">d(o.date)</field>
             <field name="name">Day</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_week">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">w(o.date)</field>
             <field name="name">Week</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_year_month">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">ym(o.date)</field>
             <field name="name">Year-Month</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_date">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">ymd(o.date)</field>
             <field name="name">Date</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_general_account">
             <field name="ttype">many2one</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.move_line.account.id</field>
             <field name="name">General Account</field>
-            <field name="related_model" search="[('model', '=', 'account.account')]"/>
+            <field name="related_model" search="[('name', '=', 'account.account')]"/>
         </record>
         <record model="babi.expression" id="analytic_account_line_general_account_code">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.move_line.account.code</field>
             <field name="name">General Account Code</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_general_account_name">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.move_line.account.name</field>
             <field name="name">General Account Name</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_account">
             <field name="ttype">many2one</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.account.id</field>
             <field name="name">Analytic Account</field>
-            <field name="related_model" search="[('model', '=', 'analytic_account.account')]"/>
+            <field name="related_model" search="[('name', '=', 'analytic_account.account')]"/>
         </record>
         <record model="babi.expression" id="analytic_account_line_account_name">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.account.name</field>
             <field name="name">Analytic Account Name</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_move_name">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.move_line.move.rec_name</field>
             <field name="name">Move</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_credit">
             <field name="ttype">float</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">-o.credit</field>
             <field name="name">-Credit</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_debit">
             <field name="ttype">float</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.debit</field>
             <field name="name">Debit</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_amount">
             <field name="ttype">float</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.debit - o.credit</field>
             <field name="name">Debit - Credit</field>
         </record>
         <record model="babi.expression" id="analytic_account_line_user_name">
             <field name="ttype">char</field>
-            <field name="model" search="[('model','=','analytic_account.line')]"/>
+            <field name="model" search="[('name','=','analytic_account.line')]"/>
             <field name="expression">o.create_uid and o.create_uid.rec_name</field>
             <field name="name">User</field>
         </record>
